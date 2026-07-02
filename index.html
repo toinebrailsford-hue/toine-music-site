@@ -255,8 +255,8 @@
             <button class="button primary compact" type="submit">Send</button>
           </form>
           <form class="demo-drop" id="demoForm">
-            <label for="demoUpload">Demo upload</label>
-            <input id="demoUpload" type="file" accept="audio/*,.mp3,.wav,.m4a,.aif,.aiff,.zip" />
+            <label for="demoLink">Demo link</label>
+            <input id="demoLink" type="url" placeholder="Google Drive, Dropbox, SoundCloud, YouTube..." />
           </form>
         </div>
       </section>
@@ -270,14 +270,16 @@
             live version can connect to Calendly, Acuity, Square, Stripe, or your preferred calendar.
           </p>
         </div>
-        <form class="booking-form">
+        <form class="booking-form" action="https://formspree.io/f/xaqgldoa" method="POST">
+          <input type="hidden" name="_subject" value="New TOINE booking request" />
+          <input type="hidden" name="source" value="Booking form" />
           <label>
             Name
-            <input type="text" name="name" placeholder="Artist or contact name" />
+            <input type="text" name="name" placeholder="Artist or contact name" required />
           </label>
           <label>
             Email
-            <input type="email" name="email" placeholder="you@example.com" />
+            <input type="email" name="email" placeholder="you@example.com" required />
           </label>
           <label>
             Project Type
@@ -291,9 +293,9 @@
           </label>
           <label>
             Message
-            <textarea name="message" rows="5" placeholder="Tell me what you want to make."></textarea>
+            <textarea name="message" rows="5" placeholder="Tell me what you want to make." required></textarea>
           </label>
-          <button class="button primary" type="button">Request Booking</button>
+          <button class="button primary" type="submit">Request Booking</button>
         </form>
       </section>
     </main>
