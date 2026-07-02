@@ -110,6 +110,6 @@ demoLink.addEventListener("change", () => {
 });
 
 window.addEventListener("load", () => {
-  addMessage("Peace. I’m going to ask a few questions so TOINE can hear where the project is headed.");
+  addMessage("I’m going to ask a few questions so TOINE can hear where the project is headed.");
   window.setTimeout(askNext, 500);
 });
