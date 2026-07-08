@@ -421,6 +421,10 @@ h3 {
   transition: transform 600ms ease, filter 600ms ease;
 }
 
+.photo-tile img[src$="toine-stage-bw.jpg"] {
+  object-position: 50% 78%;
+}
+
 .photo-tile:hover img {
   filter: sepia(0.12) saturate(1) contrast(1.1) brightness(0.96);
   transform: scale(1.025);
